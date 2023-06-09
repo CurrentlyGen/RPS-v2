@@ -6,7 +6,7 @@ function getComputerChoice() {
 
 function checkValidChoice(choice) {
     const validChoices = ["rock", "paper", "scissors"];
-    return choice !== null || !validChoices.includes(choice.toLowerCase());
+    return choice !== null && validChoices.includes(choice.toLowerCase());
 }
 
 function determineResult(playerChoice, computerChoice){
@@ -26,7 +26,8 @@ function determineResult(playerChoice, computerChoice){
 function playRound() {
     let playerChoice = prompt("Rock, Paper or Scissors");
     const computerChoice = getComputerChoice();
-    while(!checkValidChoice(playerChoice)) {
+    console.log(checkValidChoice(playerChoice))
+    while( !checkValidChoice(playerChoice)) {
         playerChoice = prompt("Please choose Rock, Paper or Scissors");
     }
     return determineResult(playerChoice, computerChoice);
