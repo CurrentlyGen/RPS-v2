@@ -26,7 +26,6 @@ function determineResult(playerChoice, computerChoice){
 function playRound() {
     let playerChoice = prompt("Rock, Paper or Scissors");
     const computerChoice = getComputerChoice();
-    console.log(checkValidChoice(playerChoice))
     while( !checkValidChoice(playerChoice)) {
         playerChoice = prompt("Please choose Rock, Paper or Scissors");
     }
